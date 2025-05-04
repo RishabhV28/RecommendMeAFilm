@@ -1,0 +1,7 @@
+ul{
+    border-color: black;
+    border: 2px solid;
+    width: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
