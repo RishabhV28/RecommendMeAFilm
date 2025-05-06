@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const app = express();
 const Film=require('./models/films.models.js')
 const cors = require('cors');
-const path = require('path');
 
 app.use(cors())
 app.use(express.json())
@@ -19,9 +18,6 @@ catch(error){
     res.status(500).json({message:error.message})
 }
 })
-
-app.use(express.static(path.join(__dirname, 'frontend/dist')));
-
 
 app.post('/submit', async (req, res) => {
   try {
