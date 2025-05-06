@@ -24,7 +24,7 @@ const Form = ()=>{
       const handleSubmit=async(e)=>{
         e.preventDefault()
         try{
-          const res=await axios.post('http://localhost:3000/submit',formData)
+          const res=await axios.post('http://recommend-me-a-film-ix3l.vercel.app/submit',formData)
           setButtontext("submitted succesfully")
         }
         catch(error){

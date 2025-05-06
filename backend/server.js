@@ -9,12 +9,25 @@ const path = require('path');
 
 app.use(cors())
 app.use(express.json())
+
+app.use(cors({
+  origin: ['https://recommend-me-a-film-ix3l.vercel.app'], 
+  methods: ['POST', 'GET'],
+  credentials: true
+}));
+
+
+app.get("/",(req,res)=>{
+  res.json("hello")
+})
+
 app.get('/api/films', async(req, res) => {
   try{
     const films =await Film.find({})
     res.status(200).json(films)
 
 }
+
 catch(error){
     res.status(500).json({message:error.message})
 }
