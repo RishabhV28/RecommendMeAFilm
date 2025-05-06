@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use(cors({
-  origin: ['https://recommend-me-a-film-ix4l.vercel.app'], 
+  origin: ['https://localhost:3000'], 
   methods: ['POST', 'GET'],
   credentials: true
 }));
